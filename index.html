@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<title>Frontend Mentor | Crowdfunding product page</title>
+
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+	<main class="page">
+		<header class="header">
+			<div class="header__heading">
+				<div class="header__heading__logo">
+					<img src="./assets/images/logo.svg" alt="">
+				</div>
+				<div class="header__heading__nav hide-on-mobile">
+					<ul class="header__heading__nav__navbar">
+						<li class="header__heading__nav__item">
+							<a href="" class="header__heading__nav__item__link">About</a>
+						</li>
+						<li class="header__heading__nav__item">
+							<a href="" class="header__heading__nav__item__link">Discover</a>
+						</li>
+						<li class="header__heading__nav__item">
+							<a href="" class="header__heading__nav__item__link">Get Started</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="header__heading__mobile__nav">
+					<img onclick='openAndCloseMobileNav(this)' src="./assets/images/icon-hamburger.svg" alt="">
+					<ul class="header__heading__mobile__nav__navbar">
+						<li class="header__heading__mobile__nav__item">
+							<a href="" class="header__heading__mobile__nav__item__link">About</a>
+						</li>
+						<li class="header__heading__mobile__nav__item">
+							<a href="" class="header__heading__mobile__nav__item__link">Discover</a>
+						</li>
+						<li class="header__heading__mobile__nav__item">
+							<a href="" class="header__heading__mobile__nav__item__link">Get Started</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<article class="body">
+			<div class="body__wrap">
+				<div class="body__container body__container--header">
+					<div class="body__container__content">
+						<img src="./assets/images/logo-mastercraft.svg" alt="" class="body__container--header__img">
+						<h1 class="body__container--header__title">Mastercraft Bamboo Moniter Riser</h1>
+						<span class="body__container--header__desc">A beautiful & handcrafted monitor stand to reduce
+							neck and eyestrain.</span>
+						<div class="body__container--header__btn">
+							<button onclick="openHeaderLayout()" class="base-btn">Back this project</button>
+							<button aria-checked="false" onclick="bookMark()" class="base-btn btn__bookmark">
+								<img src="./assets/images/icon-bookmark.svg" alt="bookmark icon">
+								<span class="hide-on-mobile">Bookmark</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="body__container body__container--data">
+					<div class="body__container__content">
+						<ul class="body__container--data__list">
+							<li class="body__container--data__item">
+								<span>$89,914</span>
+								<span>of $100,000 backed</span>
+							</li>
+							<li class="body__container--data__item">
+								<span>5,007</span>
+								<span>total backers</span>
+							</li>
+							<li class="body__container--data__item">
+								<span>56</span>
+								<span>days left</span>
+							</li>
+						</ul>
+						<div class="body__container--data__bar">
+							<div class="body__container--data__bar__progress"></div>
+						</div>
+					</div>
+				</div>
+				<div class="body__container body__container--info">
+					<div class="body__container__content">
+						<div class="body__container--info__about">
+							<h3 class="body__container--info__about__title">About this project</h3>
+							<div class="body__container--info__desc">The Mastercraft Bamboo Monitor Riser is a sturdy
+								and stylish platform that elevates your screen
+								to a more comfortable viewing height. Placing your monitor at eye level has the
+								potential to improve
+								your posture and make you more comfortable while at work, helping you stay focused on
+								the task at hand.
+								<br><br>
+								Featuring artisan craftsmanship, the simplicity of design creates extra desk space below
+								your computer
+								to allow notepads, pens, and USB sticks to be stored under the stand.</d>
+							</div>
+							<ul class="body__container--info__list">
+								<li class="body__container--info__item">
+									<div class="body__container--info__title">
+										<h4 class="body__container--info__title__name">Bamboo Stand</h4>
+										<span class="body__container--info__title__price">Pledge $25 or more</span>
+									</div>
+									<div class="body__container--info__desc">You get an
+										ergonomic stand made of natural bamboo. You've helped us launch our promotional
+										campaign, and you’ll be added to a special Backer member list.</div>
+									<div class="body__container--info__footer">
+										<div class="body__container--info__footer__number-left">
+											<span>101 </span>
+											left
+										</div>
+										<button onclick="openHeaderLayout()" class="base-btn base-btn--info">Select Reward</button>
+									</div>
+								</li>
+								<li class="body__container--info__item">
+									<div class="body__container--info__title">
+										<h4 class="body__container--info__title__name">Black Edition Stand</h4>
+										<span class="body__container--info__title__price">Pledge $75 or more</span>
+									</div>
+									<div class="body__container--info__desc">You get a
+										Black Special Edition computer standand a personal thank you. You’ll be added to our
+										Backer member list. Shipping is included.</div>
+									<div class="body__container--info__footer">
+										<div class="body__container--info__footer__number-left">
+											<span>64 </span>
+											left
+										</div>
+										<button onclick="openHeaderLayout()" class="base-btn base-btn--info">Select Reward</button>
+									</div>
+								</li>
+								<li class="body__container--info__item">
+									<div class="body__container--info__title">
+										<h4 class="body__container--info__title__name">Mahogany Special Edition</h4>
+										<span class="body__container--info__title__price">Pledge $200 or more</span>
+									</div>
+									<div class="body__container--info__desc">You get two Special Edition Mahogany stands, a
+										Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list.
+										Shipping is included.</div>
+									<div class="body__container--info__footer">
+										<div class="body__container--info__footer__number-left">
+											<span>0 </span>
+											left
+										</div>
+										<button class="base-btn info-out-of-stock__btn base-btn--info">Out of Stock</button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</article>
+	</main>
+
+
+	<div onclick='closeModal()' class="modal"></div>
+	<div class="body__container--header__layout">
+		<div class="body__container__content__heading">
+			<div onclick="closeModal()" class="modal-close-btn">
+				<img src="./assets/images/icon-close-modal.svg" alt="close">
+			</div>
+			<h2 class="body__container__content__heading__title">Back this project</h2>
+			<span class="body__container__content__heading__desc">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</span>
+		</div>
+		<ul class="body__container--info__list">
+			<li class="body__container--info__item">
+				<input onclick="chooseLayOutProject(this)" type="checkbox" id="layout-project-chose__1" class="layout-choose__btn"></input>
+				<div class="body__container--info__label">
+					<label for="layout-project-chose__1" class="body__container--info__title__name">Pledge with no reward</label>
+				</div>
+				<div class="body__container--info__desc">Choose to support us without a reward if you simply believe
+					in our project. As a backer, you will be signed up to receive product updates via email.</div>
+				<div class="body__container--info__title__number-left hide-on-pc hide-on-mobile">
+					<span>101 </span>
+					left
+				</div>
+				<div class="body__container--info__enter-pledge">
+					<hr>
+					<span class="body__container--info__enter-pledge__title">Enter your pledge</span>
+					<span class="body__container--info__enter-pledge__currency-symbol">&#36;</span>
+					<input id="min0" type="number" class="base-btn enter-pledge__inp" required value="0">
+					<button onclick="openCompleteLayout()" class="base-btn enter-pledge__btn">Continue</button>
+				</div>
+			</li>
+			<li class="body__container--info__item">
+				<input onclick="chooseLayOutProject(this)" type="checkbox" id="layout-project-chose__2" class="layout-choose__btn">
+				<div class="body__container--info__label">
+					<label for="layout-project-chose__2" class="body__container--info__title__name">Bamboo Stand</label>
+					<span class="body__container--info__title__price">Pledge $25 or more</span>
+					<div class="body__container--info__title__number-left hide-on-mobile">
+						<span>101 </span>
+						left
+					</div>
+				</div>
+				</input>
+				<div class="body__container--info__desc">You get an ergonomic stand made of natural bamboo. You've
+					helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
+				</div>
+				<div class="body__container--info__title__number-left hide-on-pc">
+					<span>101 </span>
+					left
+				</div>
+				<div class="body__container--info__enter-pledge">
+					<hr>
+					<span class="body__container--info__enter-pledge__title">Enter your pledge</span>
+					<span class="body__container--info__enter-pledge__currency-symbol">&#36;</span>
+					<input id="min25" type="number" class="base-btn enter-pledge__inp" required value="25">
+					<button onclick="openCompleteLayout()" class="base-btn enter-pledge__btn">Continue</button>
+				</div>
+			</li>
+			<li class="body__container--info__item">
+				<input onclick="chooseLayOutProject(this)" type="checkbox" id="layout-project-chose__3" class="layout-choose__btn">
+				<div class="body__container--info__label">
+					<label for="layout-project-chose__3" class="body__container--info__title__name">Black Edition Stand</label>
+					<span class="body__container--info__title__price">Pledge $75 or more</span>
+					<div class="body__container--info__title__number-left hide-on-mobile">
+						<span>64 </span>
+						left
+					</div>
+				</div>
+				<div class="body__container--info__desc">You get a Black Special Edition computer standand a personal thank you. You’ll be added to our Backer member list. Shipping is included.</div>
+				<div class="body__container--info__title__number-left hide-on-pc">
+					<span>64 </span>
+					left
+				</div>
+				<div class="body__container--info__enter-pledge">
+					<hr>
+					<span class="body__container--info__enter-pledge__title">Enter your pledge</span>
+					<span class="body__container--info__enter-pledge__currency-symbol">&#36;</span>
+					<input id="min75" type="number" class="base-btn enter-pledge__inp" required value="75">
+					<button onclick="openCompleteLayout()" class="base-btn enter-pledge__btn">Continue</button>
+				</div>
+			</li>
+			<li class="body__container--info__item">
+				<input onclick="chooseLayOutProject(this)" type="checkbox" id="layout-project-chose__4" class="layout-choose__btn">
+				<div class="body__container--info__label">
+					<label for="layout-project-chose__4" class="body__container--info__title__name">Mahogany Special Edition</label>
+					<span class="body__container--info__title__price">Pledge $200 or more</span>
+					<div class="body__container--info__title__number-left hide-on-mobile">
+						<span>0 </span>
+						left
+					</div>
+				</div>
+				</input>
+				<div class="body__container--info__desc">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</div>
+				<div class="body__container--info__title__number-left hide-on-pc">
+					<span>0 </span>
+					left
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="body__container__modal__complete">
+		<img src="./assets/images/icon-check.svg" alt="" class="body__container__modal__complete__img">
+		<h2 class="body__container__modal__complete__title">Thanks for your support!</h2>
+		<span class="body__container__modal__complete__desc">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</span>
+		<button onclick="closeModal()" class="base-btn body__container__modal__complete__btn">Got it!</button>
+	</div>
+
+	<!-- JS -->
+	<script src="./assets/js/main.js"></script>
+</body>
+
+</html>
