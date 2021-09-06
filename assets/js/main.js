@@ -107,12 +107,12 @@ let isMobileNavBarOpen = false;
 function openAndCloseMobileNav(e) {
     if (!isMobileNavBarOpen) {
         e.src = "../assets/images/icon-close-menu.svg";
-        mobileNavBar.style.visibility = "visible";
+        mobileNavBar.style.display = "block";
     } else {
         e.src = "../assets/images/icon-hamburger.svg";
-        mobileNavBar.style.visibility = "hidden";
+        mobileNavBar.style.display = "none";
     }
-    isMobileNavBarOpen = !isMobileNavBarOpen;
+    isMobileNavBarOpen = !isMobileNavBarOpen;   
 }
 
 const layoutHr = document.querySelectorAll("hr");
