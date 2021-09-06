@@ -96,8 +96,8 @@
     padding: 0;
     padding-right: 16px;
     background-color: var(--Body-bgc);
-    will-change: color, image;
 }
+
 .btn__bookmark:hover {
     opacity: 0.85;
     background-color: var(--Body-bgc);
@@ -112,7 +112,6 @@
 .btn__bookmark img {
     width: 50px;
     height: fit-content;
-    -webkit-tap-highlight-color: red;
 }
 
 .body__container--data__list {
