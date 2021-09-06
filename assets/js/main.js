@@ -1,19 +1,12 @@
-const bookMarkBtn = document.querySelector(".btn__bookmark");
-let isBookMarked = false;
+const bookMarkBtn = document.querySelectorAll(".btn__bookmark");
+bookMarkBtn[1].style.display = "none";
+function bookMarked() {
+    bookMarkBtn[0].style.display = "none";
+    bookMarkBtn[1].style.display = "flex";
+}
 function bookMark() {
-    let bookMarkText = bookMarkBtn.querySelector("span");
-    if (!isBookMarked) {
-        bookMarkBtn.querySelector("img").src =
-            "../assets/images/icon-bookmarked.svg";
-        bookMarkText.style.color = "var(--Dark-cyan)";
-        bookMarkText.innerText = "Bookmarked";
-    } else {
-        bookMarkBtn.querySelector("img").src =
-            "../assets/images/icon-bookmark.svg";
-        bookMarkText.innerText = "Bookmark";
-        bookMarkText.style.color = "var(--Dark-gray)";
-    }
-    isBookMarked = !isBookMarked;
+    bookMarkBtn[0].style.display = "flex";
+    bookMarkBtn[1].style.display = "none";
 }
 
 // fixedLayOutTop
@@ -102,17 +95,20 @@ function chooseLayOutProject(e) {
 const mobileNavBar = document.querySelector(
     ".header__heading__mobile__nav__navbar"
 );
-let isMobileNavBarOpen = false;
 
-function openAndCloseMobileNav(e) {
-    if (!isMobileNavBarOpen) {
-        e.src = "../assets/images/icon-close-menu.svg";
-        mobileNavBar.style.display = "block";
-    } else {
-        e.src = "../assets/images/icon-hamburger.svg";
-        mobileNavBar.style.display = "none";
-    }
-    isMobileNavBarOpen = !isMobileNavBarOpen;   
+const mobileNavBarBtn = document.querySelectorAll(
+    ".header__heading__mobile__nav > img"
+);
+mobileNavBarBtn[1].style.display = "none";
+function openMobileNav() {
+    mobileNavBarBtn[0].style.display = "none";
+    mobileNavBarBtn[1].style.display = "block";
+    mobileNavBar.style.display = "block";
+}
+function closeMobileNav() {
+    mobileNavBarBtn[1].style.display = "none";
+    mobileNavBarBtn[0].style.display = "block";
+    mobileNavBar.style.display = "none";
 }
 
 const layoutHr = document.querySelectorAll("hr");

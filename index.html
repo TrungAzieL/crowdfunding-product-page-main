@@ -39,7 +39,8 @@
 				</div>
 
 				<div class="header__heading__mobile__nav">
-					<img onclick='openAndCloseMobileNav(this)' src="./assets/images/icon-hamburger.svg" alt="">
+					<img onclick='openMobileNav(this)' src="./assets/images/icon-hamburger.svg" alt="">
+					<img onclick='closeMobileNav(this)' src="./assets/images/icon-close-menu.svg" alt="">
 					<ul class="header__heading__mobile__nav__navbar">
 						<li class="header__heading__mobile__nav__item">
 							<a href="" class="header__heading__mobile__nav__item__link">About</a>
@@ -65,9 +66,13 @@
 							neck and eyestrain.</span>
 						<div class="body__container--header__btn">
 							<button onclick="openHeaderLayout()" class="base-btn">Back this project</button>
-							<button aria-checked="false" onclick="bookMark()" class="base-btn btn__bookmark">
+							<button onclick="bookMarked()" class="base-btn btn__bookmark">
 								<img src="./assets/images/icon-bookmark.svg" alt="bookmark icon">
 								<span class="hide-on-mobile">Bookmark</span>
+							</button>
+							<button onclick="bookMark()" class="base-btn btn__bookmark">
+								<img src="./assets/images/icon-bookmarked.svg" alt="bookmark icon">
+								<span class="hide-on-mobile">Bookmarked</span>
 							</button>
 						</div>
 					</div>
